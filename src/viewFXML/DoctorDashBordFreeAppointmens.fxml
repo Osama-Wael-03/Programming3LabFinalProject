@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1207.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DoctorDashBordFreeAppointmensController">
+   <children>
+      <VBox prefHeight="748.0" prefWidth="273.0" style="-fx-background-color: #3F2B63; -fx-text-fill: white;">
+         <children>
+            <Pane prefHeight="165.0" prefWidth="273.0">
+               <children>
+                  <Label layoutX="26.0" layoutY="56.0" prefHeight="48.0" prefWidth="204.0" style="-fx-text-fill: white; -fx-font-size: 25;" text="Clinic System" />
+               </children>
+            </Pane>
+            <Button fx:id="patientPage" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#patientPageButton" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7156DD; -fx-text-fill: white; -fx-font-size: 20;" text="Patient Page">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="FreeAppoitmentsPage" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#FreeAppoitmentsButton" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #0240f7; -fx-text-fill: white; -fx-font-size: 20;" text="Free Appoitments">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="BokkedAppoitmentsPage" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#BokkedAppoitmentsButton" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7156DD; -fx-text-fill: white; -fx-font-size: 20;" text="Bokked Appoitments">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="296.0" layoutY="9.0" prefHeight="748.0" prefWidth="903.0" style="-fx-background-color: silver; -fx-border-color: black; -fx-border-radius: 15;">
+         <children>
+            <Button fx:id="CreateAppoitments" layoutX="26.0" layoutY="628.0" mnemonicParsing="false" onAction="#CreateAction" prefHeight="56.0" prefWidth="180.0" style="-fx-background-color: #0240f7; -fx-text-fill: white;" text="+ Create New Appoitments" />
+            <Button fx:id="ShowButton" layoutX="237.0" layoutY="628.0" mnemonicParsing="false" onAction="#ShowAction" prefHeight="56.0" prefWidth="172.0" style="-fx-background-color: #06278a; -fx-text-fill: white;" text="Show All Appoitments" />
+            <TextField fx:id="searchBar" layoutX="674.0" layoutY="34.0" prefHeight="53.0" prefWidth="208.0" style="-fx-border-color: #06278a;" />
+            <Button fx:id="SearchButton" layoutX="579.0" layoutY="35.0" mnemonicParsing="false" onAction="#SeacrchAction" prefHeight="52.0" prefWidth="95.0" style="-fx-background-color: #06278a; -fx-text-fill: white;" text="Srarch" />
+            <TableView fx:id="AppoitmentsTable" layoutX="459.0" layoutY="202.0" prefHeight="257.0" prefWidth="430.0">
+              <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="idcolumn" prefWidth="75.0" style="-fx-alignment: center;" text="ID" />
+                  <TableColumn fx:id="datecolumn" prefWidth="75.0" style="-fx-alignment: center;" text="Date" />
+                  <TableColumn fx:id="daycolumn" prefWidth="75.0" style="-fx-alignment: center;" text="Day" />
+                  <TableColumn fx:id="timecolumn" editable="false" prefWidth="75.0" style="-fx-alignment: center;" text="Time" />
+               </columns>
+            </TableView>
+            <Button fx:id="DeleteButton" layoutX="639.0" layoutY="628.0" mnemonicParsing="false" onAction="#DeleteAction" prefHeight="56.0" prefWidth="131.0" style="-fx-background-color: orange; -fx-text-fill: white;" text="Delete" />
+            <Button fx:id="UpdateButton" layoutX="446.0" layoutY="628.0" mnemonicParsing="false" onAction="#UpdateAction" prefHeight="56.0" prefWidth="131.0" style="-fx-background-color: #0240f7; -fx-text-fill: white;" text="Update" />
+            <Label layoutX="72.0" layoutY="266.0" style="-fx-font-weight: bold;" text="DATE" />
+            <Label layoutX="75.0" layoutY="310.0" style="-fx-font-weight: bold;" text="DAY" />
+            <Label layoutX="75.0" layoutY="353.0" style="-fx-font-weight: bold;" text="TIME" />
+            <TextField fx:id="DateTextfiled" layoutX="159.0" layoutY="261.0" />
+            <TextField fx:id="DayTextfiled" layoutX="159.0" layoutY="305.0" />
+            <TextField fx:id="TimeTextfiled" layoutX="159.0" layoutY="348.0" />
+            <Label layoutX="605.0" layoutY="168.0" text="All Free Appoitments" />
+            <Button fx:id="logoitbutton" layoutX="32.0" layoutY="41.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="56.0" prefWidth="220.0" style="-fx-background-color: RED; -fx-font-weight: BOLD;" text="LOG OUT" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

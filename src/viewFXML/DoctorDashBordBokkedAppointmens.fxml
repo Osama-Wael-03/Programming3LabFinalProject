@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1207.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DoctorDashBordBokkedAppointmensController">
+   <children>
+      <VBox prefHeight="748.0" prefWidth="273.0" style="-fx-background-color: #3F2B63; -fx-text-fill: white;">
+         <children>
+            <Pane prefHeight="165.0" prefWidth="273.0">
+               <children>
+                  <Label layoutX="26.0" layoutY="56.0" prefHeight="48.0" prefWidth="204.0" style="-fx-text-fill: white; -fx-font-size: 25;" text="Clinic System" />
+               </children>
+            </Pane>
+            <Button fx:id="patientPage" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#patientPageButton" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7156DD; -fx-text-fill: white; -fx-font-size: 20;" text="Patient Page">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="FreeAppoitmentsPage" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#FreeAppoitmentsButton" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7156DD; -fx-text-fill: white; -fx-font-size: 20;" text="Free Appoitments">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="BokkedAppoitmentsPage" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#BokkedAppoitmentsButton" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #0240f7; -fx-text-fill: white; -fx-font-size: 20;" text="Bokked Appoitments">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="LogOut" layoutX="296.0" layoutY="9.0" onDragDetected="#logOutAction" prefHeight="748.0" prefWidth="903.0" style="-fx-background-color: silver; -fx-border-color: black; -fx-border-radius: 15;">
+         <children>
+            <Button fx:id="ShowButton" layoutX="521.0" layoutY="589.0" mnemonicParsing="false" onAction="#ShowAction" prefHeight="56.0" prefWidth="172.0" style="-fx-background-color: #06278a; -fx-text-fill: white; -fx-font-weight: bold;" text="Show All Appoitments" />
+            <TextField fx:id="searchBar" layoutX="674.0" layoutY="34.0" prefHeight="53.0" prefWidth="208.0" style="-fx-border-color: #06278a;" />
+            <Button fx:id="SearchButton" layoutX="488.0" layoutY="35.0" mnemonicParsing="false" onAction="#SeacrchAction" prefHeight="52.0" prefWidth="186.0" style="-fx-background-color: #06278a; -fx-text-fill: white; -fx-font-weight: bold;" text="Srarch by patient fname" />
+            <TableView fx:id="AppoitmentsTable" layoutX="89.0" layoutY="216.0" prefHeight="257.0" prefWidth="731.0" style="-fx-background-color: white;" styleClass="doctor-dashboard-table" stylesheets="@doctor-dashboard.css">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="82.40005493164062" style="-fx-alignment: CENTER; -fx-font-size: 15px;" text="ID" />
+                  <TableColumn fx:id="dateColumn" prefWidth="172.0" style="-fx-alignment: center;" text="Appointment  Date" />
+                  <TableColumn fx:id="dayColumn" prefWidth="90.0" style="-fx-alignment: center;" text="Appointment Day" />
+                  <TableColumn fx:id="timeColumn" editable="false" prefWidth="96.0" style="-fx-alignment: center;" text="Appointment  Time" />
+                  <TableColumn fx:id="PatientFnamecolumn" editable="false" prefWidth="144.0" style="-fx-alignment: center;" text="Patient First Name" />
+               </columns>
+            </TableView>
+            <Button fx:id="finishingButton" layoutX="731.0" layoutY="588.0" mnemonicParsing="false" onAction="#finishingActionMethod" prefHeight="56.0" prefWidth="131.0" style="-fx-background-color: orange; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px;" text="Finshed" />
+            <Label layoutX="291.0" layoutY="147.0" style="-fx-font-size: 30px; -fx-font-weight: bold;" text="All Bokked Appoitments" />
+            <TextArea fx:id="NotesTextArea" layoutX="62.0" layoutY="553.0" prefHeight="165.0" prefWidth="304.0" promptText="Write FeedBack Here .. " />
+            <Label layoutX="24.0" layoutY="511.0" prefHeight="36.0" prefWidth="186.0" style="-fx-font-size: 25px; -fx-font-weight: bold;" text="Add Notes..." />
+            <Button fx:id="logOutButton" layoutX="49.0" layoutY="35.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="56.0" prefWidth="220.0" style="-fx-background-color: RED; -fx-font-weight: BOLD;" text="LOG OUT" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
