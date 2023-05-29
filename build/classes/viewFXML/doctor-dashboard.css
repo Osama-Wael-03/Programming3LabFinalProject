@@ -1,0 +1,37 @@
+/* Styling the TableView */
+.doctor-dashboard-table {
+    -fx-background-color: lightgray;
+}
+
+/* Styling the table headers */
+.doctor-dashboard-table .column-header-background {
+    -fx-background-color: #9decfc;
+    -fx-text-fill: white;
+}
+
+/* Styling the table rows */
+.doctor-dashboard-table .table-row-cell {
+    -fx-background-color: white;
+}
+
+/* Styling the selected table rows */
+.doctor-dashboard-table .table-row-cell:selected {
+    -fx-background-color: lightblue;
+}
+
+/* Styling the alternating table rows */
+.doctor-dashboard-table .table-row-cell:odd {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Styling the finishing button */
+.doctor-dashboard-table .finishing-button {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+
+/* Styling the logout button */
+.doctor-dashboard-table .logout-button {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}

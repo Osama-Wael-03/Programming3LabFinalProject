@@ -1,0 +1,28 @@
+.ok{
+    -fx-border-color: orange;
+    -fx-background-color: orange;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    fx-background-radius: 30px;
+    fx-background-radius: 10px;
+}
+.cancel{
+   -fx-border-color: #38c940;
+    -fx-background-color: #38c940;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    fx-background-radius: 30px;
+    fx-background-radius: 10px; 
+}
+
+.label{
+    -fx-font-weight: bold;
+    -fx-text-fill: #04024e;
+    -fx-font-size: 20px;
+}
+.pageColor{
+-fx-background-color: linear-gradient(from 0% 0% to 100% 100%,#9decfc, ffffff);
+}
+

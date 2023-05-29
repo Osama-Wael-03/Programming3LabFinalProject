@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UpdateUserDataController">
+   <stylesheets>
+      <URL value="@newpatientregistration.css" />
+   </stylesheets>
+   <children>
+      <Label layoutX="110.0" layoutY="37.0" prefHeight="46.0" prefWidth="331.0" style="-fx-font-size: 30px;" text="   Update Patient Data" />
+      <Label layoutX="105.0" layoutY="111.0" text="User Name" />
+      <Label layoutX="105.0" layoutY="154.0" text="Password" />
+      <Label layoutX="105.0" layoutY="197.0" text="First name" />
+      <Label layoutX="106.0" layoutY="246.0" text="Last name" />
+      <Label layoutX="138.0" layoutY="298.0" text="Age" />
+      <Label layoutX="128.0" layoutY="349.0" text="Email" />
+      <Label layoutX="123.0" layoutY="383.0" prefHeight="44.0" prefWidth="63.0" text="Phone" />
+      <Label layoutX="125.0" layoutY="435.0" text="gender" />
+      <TextField fx:id="UsernnameTextField" layoutX="219.0" layoutY="110.0" />
+      <TextField fx:id="passwordTexeField" layoutX="219.0" layoutY="153.0" />
+      <TextField fx:id="firstnameTextField" layoutX="219.0" layoutY="196.0" />
+      <TextField fx:id="lastnameTextField" layoutX="219.0" layoutY="245.0" />
+      <TextField fx:id="ageTextField" layoutX="219.0" layoutY="297.0" />
+      <TextField fx:id="emailTextField" layoutX="219.0" layoutY="348.0" />
+      <TextField fx:id="phoneTextField" layoutX="219.0" layoutY="389.0" />
+      <RadioButton fx:id="male" layoutX="226.0" layoutY="440.0" mnemonicParsing="false" text="male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gendertg" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="female" layoutX="312.0" layoutY="440.0" mnemonicParsing="false" text="Female" toggleGroup="$gendertg" />
+      <Button fx:id="registrButton" layoutX="193.0" layoutY="497.0" mnemonicParsing="false" onAction="#registrAction" styleClass="ok" text="Save" />
+      <Button fx:id="cancelButton" layoutX="318.0" layoutY="497.0" mnemonicParsing="false" onAction="#cancelAction" styleClass="cancel" text="cancel" />
+      <Group layoutX="472.0" layoutY="209.0" />
+   </children>
+   <styleClass>
+      <String fx:value="mainFxmlClass" />
+      <String fx:value="pageColor" />
+   </styleClass>
+</AnchorPane>

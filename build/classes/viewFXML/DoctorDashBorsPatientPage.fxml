@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1207.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DoctorDashBorsPatientPageController">
+   <children>
+      <VBox prefHeight="748.0" prefWidth="273.0" style="-fx-background-color: #3F2B63; -fx-text-fill: white;">
+         <children>
+            <Pane prefHeight="165.0" prefWidth="273.0">
+               <children>
+                  <Label layoutX="26.0" layoutY="56.0" prefHeight="48.0" prefWidth="204.0" style="-fx-text-fill: white; -fx-font-size: 25;" text="Clinic System" />
+               </children>
+            </Pane>
+            <Button fx:id="patientPage" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#patientPageButton" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #0240f7; -fx-text-fill: white; -fx-font-size: 20;" text="Patient Page">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="FreeAppoitmentsPage" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#FreeAppoitmentsButton" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7156DD; -fx-text-fill: white; -fx-font-size: 20;" text="Free Appoitments">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="BokkedAppoitmentsPage" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#BokkedAppoitmentsButton" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7156DD; -fx-text-fill: white; -fx-font-size: 20;" text="Bokked Appoitments">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="296.0" layoutY="9.0" prefHeight="748.0" prefWidth="903.0" style="-fx-background-color: silver; -fx-border-color: black; -fx-border-radius: 15;">
+         <children>
+            <Button fx:id="CreatePatient" layoutX="26.0" layoutY="628.0" mnemonicParsing="false" onAction="#CreateAction" prefHeight="56.0" prefWidth="186.0" style="-fx-background-color: #0240f7; -fx-text-fill: white;" text="+ Create New Patient" />
+            <Button fx:id="ShowButton" layoutX="260.0" layoutY="628.0" mnemonicParsing="false" onAction="#ShowAction" prefHeight="56.0" prefWidth="131.0" style="-fx-background-color: #06278a; -fx-text-fill: white;" text="Show All Patient" />
+            <TextField fx:id="searchBar" layoutX="674.0" layoutY="34.0" prefHeight="53.0" prefWidth="208.0" style="-fx-border-color: #06278a;" />
+            <Button fx:id="SearchButton" layoutX="579.0" layoutY="35.0" mnemonicParsing="false" onAction="#SeacrchAction" prefHeight="52.0" prefWidth="95.0" style="-fx-background-color: #06278a; -fx-text-fill: white;" text="Srarch" />
+            <Button fx:id="DeleteButton" layoutX="600.0" layoutY="628.0" mnemonicParsing="false" onAction="#DeleteAction" prefHeight="56.0" prefWidth="131.0" style="-fx-background-color: orange; -fx-text-fill: white;" text="Delete" />
+            <Button fx:id="UpdateButton" layoutX="428.0" layoutY="628.0" mnemonicParsing="false" onAction="#UpdateAction" prefHeight="56.0" prefWidth="131.0" style="-fx-background-color: #0240f7; -fx-text-fill: white;" text="Update" />
+            <Button fx:id="logoutbutton" layoutX="43.0" layoutY="26.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="56.0" prefWidth="220.0" style="-fx-background-color: RED; -fx-font-weight: BOLD;" text="LOG OUT" />
+            <TableView fx:id="PatientTable" layoutX="-1.0" layoutY="189.0" prefHeight="345.0" prefWidth="905.0">
+              <columns>
+                <TableColumn fx:id="patientId" prefWidth="48.53338623046875" style="-fx-alignment: center;" text="id" />
+                <TableColumn fx:id="patientusername" prefWidth="113.59991455078125" style="-fx-alignment: center;" text="UserName" />
+                  <TableColumn fx:id="passwordTableColumn" prefWidth="91.73336791992188" style="-fx-alignment: center;" text="Password" />
+                  <TableColumn fx:id="patientfirstname" prefWidth="113.60003662109375" style="-fx-alignment: center;" text="First Name" />
+                  <TableColumn fx:id="patientLastName" prefWidth="120.79998779296875" style="-fx-alignment: center;" text="Last Name" />
+                  <TableColumn fx:id="ageTableColumn" prefWidth="62.4000244140625" style="-fx-alignment: center;" text="Age" />
+                  <TableColumn fx:id="emailTableColumn" prefWidth="169.066650390625" style="-fx-alignment: center;" text="Email" />
+                  <TableColumn fx:id="phoneTableColumn" prefWidth="90.93328857421875" style="-fx-alignment: center;" text="Phone" />
+                  <TableColumn fx:id="genderTableColumn" prefWidth="98.13330078125" style="-fx-alignment: center;" text="Gender" />
+              </columns>
+            </TableView>
+            <Label layoutX="220.0" layoutY="115.0" prefHeight="55.0" prefWidth="418.0" style="-fx-font-size: 30px; -fx-alignment: Center; -fx-font-weight: bold;" styleClass="fx-font" text="Patients Data Table" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

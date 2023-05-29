@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="738.0" styleClass="pageColor" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainScreenController">
+    <stylesheets>
+        <URL value="@mainscreen.css" />
+    </stylesheets>
+    <children>
+      <Label alignment="CENTER" layoutX="83.0" layoutY="40.0" prefHeight="55.0" prefWidth="591.0" style="-fx-font-size: 25px;" text="Welcome to Our Clinic Manegment System" />
+      <Button fx:id="DoctorButton" layoutX="131.0" layoutY="269.0" mnemonicParsing="false" onAction="#DoctorButtonAction" prefHeight="90.0" prefWidth="198.0" style="-fx-font-size: 17px;" text="Login As Doctor">
+         <styleClass>
+            <String fx:value="doctorButton" />
+            <String fx:value="DoctorButton" />
+         </styleClass>
+      </Button>
+      <Button fx:id="PatientButton" layoutX="431.0" layoutY="269.0" mnemonicParsing="false" onAction="#PatientButtonAction" prefHeight="90.0" prefWidth="198.0" style="-fx-font-size: 17px;" styleClass="PatientButton" text="Login As Patient" />
+   </children>
+</AnchorPane>
